@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Showcase — Helen Onanusi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">H</span><span class="logo-text">Helen Onanusi</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html" class="active">Showcase</a></li>
+          <li><a href="problem-solving.html">Problem-Solving</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container showcase-page">
+    <h1>Business Showcase — Selected Projects</h1>
+
+    <section class="projects">
+      <article class="project-card">
+        <h2>Project A — UX Redesign for Campus Cafe (Group)</h2>
+        <p><strong>Role:</strong> Frontend lead & UI prototyper.</p>
+        <p><strong>Problem:</strong> The cafe's online menu and ordering flow were unclear, causing high phone orders and frequent mistakes.</p>
+        <p><strong>Outcome:</strong> Produced a clickable prototype (Figma) and a responsive HTML/CSS prototype. Stakeholder testing showed reduced order confusion in user tests and a clear path to reduce phone workload.</p>
+      </article>
+
+      <article class="project-card">
+        <h2>Project B — Accessibility Improvements (Individual)</h2>
+        <p><strong>Role:</strong> Accessibility auditor & implementer.</p>
+        <p><strong>Problem:</strong> A university web page had low contrast and missing ARIA roles, making it difficult for some users.</p>
+        <p><strong>Outcome:</strong> Delivered an annotated report and updated HTML/CSS demonstrating improved contrast, keyboard navigation, and ARIA labels — validated against basic WCAG checks.</p>
+      </article>
+
+      <article class="project-card">
+        <h2>Project C — Problem-Solving Page Design Concept (Restaurant Case Study)</h2>
+        <p><strong>Role:</strong> Acting CTO & lead designer for the case study.</p>
+        <p><strong>Problem:</strong> A local restaurant lacked an online presence for bookings + customer engagement; they received a lot of walk-ins but had no streamlined booking or feedback channel.</p>
+        <p><strong>Outcome:</strong> Created a prototype Problem-Solving Page that integrates social links, contact details, and a booking/feedback form which generates an email to the restaurant manager (simulated). This served as a minimum viable feature set that could be handed to developers for production.</p>
+
+        <h3>Design concept & why</h3>
+        <p>The Problem-Solving Page uses a simple, linear layout: situation → value proposition → booking form → contact & socials. This order reduces friction: visitors immediately understand the business goal, can take action (book/feedback) and then verify contact/social proof. Forms are lightweight and validated on the client side to match the brief's "no live database" requirement while still producing an actionable email for the restaurant.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Helen Onanusi</p>
+    </div>
+  </footer>
+</body>
+</html>
