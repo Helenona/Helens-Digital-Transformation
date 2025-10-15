@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Problem-Solving — Restaurant Digital Transformation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">H</span><span class="logo-text">Helen Onanusi</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html">Showcase</a></li>
+          <li><a href="problem-solving.html" class="active">Problem-Solving</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container problem-page">
+    <h1>Restaurant Digital Transformation — Problem-Solving</h1>
+
+    <section class="case-intro">
+      <h2>Business context</h2>
+      <p>As CTO for a local restaurant, the goal is to modernise customer engagement: enable simple online bookings, capture feedback, and increase social reach. The prototype below demonstrates a lightweight, low-friction approach that can scale into a full booking system later.</p>
+
+      <div class="restaurant-details">
+        <div>
+          <h3>Restaurant</h3>
+          <p><strong>Oak & Ember</strong> (example restaurant)</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Manager email: <a href="mailto:manager@oakandember.example">manager@oakandember.example</a></p>
+          <p>Phone: 0161 555 1234</p>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener">X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <h2>Booking / Feedback Form</h2>
+      <p>This form demonstrates client-side validation and automatically generates an email containing the user's input. (No database required.)</p>
+
+      <form id="restaurantForm" class="form-card" novalidate>
+        <label for="guestName">Your name</label>
+        <input id="guestName" name="guestName" required type="text" placeholder="Your full name" />
+
+        <label for="guestEmail">Your email</label>
+        <input id="guestEmail" name="guestEmail" required type="email" placeholder="you@example.com" />
+
+        <label for="requestType">Request type</label>
+        <select id="requestType" name="requestType" required>
+          <option value="">Choose...</option>
+          <option value="booking">Booking request</option>
+          <option value="feedback">Feedback</option>
+          <option value="general">General enquiry</option>
+        </select>
+
+        <label for="details">Details (date/time for bookings, or feedback)</label>
+        <textarea id="details" name="details" required rows="5" placeholder="Describe your request or feedback"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Generate Email & Open Mail App</button>
+          <button type="button" id="previewBtn" class="btn ghost">Preview Email</button>
+        </div>
+
+        <p class="form-note">Note: clicking "Generate Email & Open Mail App" attempts to open the user's email client using a generated <code>mailto:</code> link. If there's no default mail client configured, copy the preview text into your email.</p>
+      </form>
+
+      <section id="emailPreview" class="email-preview" aria-live="polite" hidden>
+        <h3>Email Preview</h3>
+        <pre id="emailContent"></pre>
+        <button id="copyEmail" class="btn">Copy preview text</button>
+      </section>
+    </section>
+
+    <section class="design-rationale">
+      <h2>Design rationale</h2>
+      <p>Key choices:</p>
+      <ul>
+        <li><strong>Linear flow:</strong> explanation → action (form) → proof (contacts & socials) reduces uncertainty and supports conversion.</li>
+        <li><strong>Lightweight form:</strong> required fields only to reduce abandonment; client validation ensures data quality without back-end complexity.</li>
+        <li><strong>Email generation:</strong> using <code>mailto:</code> creates a simple handoff for restaurants to process requests without building a full booking system immediately.</li>
+        <li><strong>Social links:</strong> provide social proof and a channel for marketing; adding structured contact details increases trust.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Prototype by Helen Onanusi</p>
+    </div>
+  </footer>
+</body>
+</html>
