@@ -56,6 +56,39 @@
           <p>Open to freelance & entry-level roles from January 2026.</p>
         </div>
       </div>
+       <section class="booking-section">
+      <h2>Booking / Feedback Form</h2>
+      <p>This form demonstrates client-side validation and automatically generates an email containing the user's input. (No database required.)</p>
+
+      <form id="restaurantForm" class="form-card" novalidate>
+        <label for="guestName">Your name</label>
+        <input id="guestName" name="guestName" required type="text" placeholder="Your full name" />
+
+        <label for="guestEmail">Your email</label>
+        <input id="guestEmail" name="guestEmail" required type="email" placeholder="you@example.com" />
+
+        <label for="requestType">Request type</label>
+        <select id="requestType" name="requestType" required>
+          <option value="">Choose...</option>
+          <option value="booking">Booking request</option>
+          <option value="feedback">Feedback</option>
+          <option value="general">General enquiry</option>
+        </select>
+
+        <label for="details">Details (date/time for bookings, or feedback)</label>
+        <textarea id="details" name="details" required rows="5" placeholder="Describe your request or feedback"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Generate Email & Open Mail App</button>
+          <button type="button" id="previewBtn" class="btn ghost">Preview Email</button>
+        </div>
+
+    
+
+      <section id="emailPreview" class="email-preview" aria-live="polite" hidden>
+        <h3>Email Preview</h3>
+        <pre id="emailContent"></pre>
+        <button id="copyEmail" class="btn">Copy preview text</button>
 
       <p class="note">
   </main>
