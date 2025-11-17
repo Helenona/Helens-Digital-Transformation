@@ -274,3 +274,104 @@ main h2{color:#2b2440; margin-top:1rem}
   to{opacity:1; transform:translateY(0)}
 }
 .reveal{opacity:0; animation:fadeUp .8s ease forwards; animation-delay:.2s}
+
+/* ----- CONTACT PAGE STYLE BOOST ----- */
+
+/* Page title */
+.page-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Intro text */
+.intro-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Soft box layouts */
+.pretty-box {
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Info grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Form styling */
+.styled-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.styled-form textarea {
+  resize: vertical;
+}
+
+/* Button style */
+.btn-primary {
+  margin-top: 1.5rem;
+  background: #222;
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #444;
+}
+
+/* Email preview box */
+.email-preview {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
