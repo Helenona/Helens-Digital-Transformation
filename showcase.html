@@ -6,10 +6,16 @@
   <title>Showcase — Helen Onanusi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
+
+  <header class="site-header warm-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">H</span><span class="logo-text">Helen Onanusi</span></a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark warm-logo">H</span>
+        <span class="logo-text">Helen Onanusi</span>
+      </a>
+
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -19,48 +25,100 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
       <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
     </div>
   </header>
 
-  <main class="container showcase-page">
-    <h1>Business Showcase — Selected Projects</h1>
+  <main class="container showcase-page warm-intro">
+
+    <h1 class="page-title warm-title">Business Showcase — Selected Projects</h1>
+    <p class="intro-text">
+      A collection of early-stage digital projects, prototypes, and redesigns I created during university and independent learning.
+      Each project focuses on solving real business or user experience challenges through simple, thoughtful design.
+    </p>
 
     <section class="projects">
-      <article class="project-card">
-        <h2>Project A — UX Redesign for Campus Cafe (Group)</h2>
-        <p><strong>Role:</strong> Frontend lead & UI prototyper</p>
-        <p><strong>Challenge:</strong> The cafe’s online menu and ordering process were confusing, which led to lots of phone orders and mistakes.</p>
-        <p><strong>My Approach:</strong> I helped design a clickable Figma prototype and translated it into a responsive HTML/CSS prototype. I focused on simplifying the user journey and making the menu easy to navigate.</p>
-        <p><strong>Outcome:</strong> Testing with stakeholders showed fewer order mistakes and a clearer, smoother online ordering experience, helping the cafe reduce phone workload.</p>
+
+      <!-- PROJECT A -->
+      <article class="project-card warm-card">
+        <h2 class="warm-section-title">Project A — UX Redesign for Campus Café</h2>
+        <p class="warm-text"><strong>Role:</strong> Frontend Lead & UI Prototyper</p>
+
+        <p class="warm-text">
+          <strong>Challenge:</strong> The café’s online menu and ordering flow confused students, causing heavy phone orders and frequent mistakes.
+        </p>
+
+        <p class="warm-text">
+          <strong>My Approach:</strong> I designed a clearer, more intuitive menu layout in Figma and created a responsive HTML/CSS prototype.
+          I simplified the user journey by reducing clicks, improving visual clarity, and making common items easy to find.
+        </p>
+
+        <p class="warm-text">
+          <strong>Outcome:</strong> User testing showed improved navigation, fewer errors, and a smoother ordering experience,
+          reducing staff workload and phone queries.
+        </p>
       </article>
 
-      <article class="project-card">
-        <h2>Project B — Accessibility Improvements (Individual)</h2>
-        <p><strong>Role:</strong> Accessibility auditor & implementer</p>
-        <p><strong>Challenge:</strong> A university webpage was difficult to use for some users due to low contrast and missing ARIA roles.</p>
-        <p><strong>My Approach:</strong> I audited the page, then improved contrast, keyboard navigation, and added ARIA labels. I also documented the changes so others could continue improving accessibility.</p>
-        <p><strong>Outcome:</strong> The page passed basic WCAG checks, making it more usable and inclusive for all users.</p>
+      <!-- PROJECT B -->
+      <article class="project-card warm-card">
+        <h2 class="warm-section-title">Project B — Accessibility Improvements (Individual)</h2>
+        <p class="warm-text"><strong>Role:</strong> Accessibility Auditor & Implementer</p>
+
+        <p class="warm-text">
+          <strong>Challenge:</strong> A university webpage had low contrast, unclear navigation, and missing ARIA roles,
+          making it difficult for screen reader and keyboard users.
+        </p>
+
+        <p class="warm-text">
+          <strong>My Approach:</strong> I carried out an accessibility audit, improved text contrast, added semantic structure,
+          labelled interactive elements, and enhanced keyboard navigation.
+        </p>
+
+        <p class="warm-text">
+          <strong>Outcome:</strong> The updated page passed key WCAG checks and became more inclusive and user-friendly
+          for students with accessibility needs.
+        </p>
       </article>
 
-      <article class="project-card">
-        <h2>Project C — Problem-Solving Page Design Concept (Restaurant Case Study)</h2>
-        <p><strong>Role:</strong> Acting CTO & lead designer</p>
-        <p><strong>Challenge:</strong> A local restaurant had no online presence for bookings or customer engagement. They relied on walk-ins, which made managing reservations and feedback tricky.</p>
-        <p><strong>My Approach:</strong> I designed a prototype page that included social links, contact info, and a simple booking/feedback form that generates an email (simulated). I focused on a clean layout and intuitive flow so visitors could easily understand the restaurant’s offerings and take action.</p>
-        <p><strong>Outcome:</strong> The prototype gave the restaurant a clear, practical starting point that could be handed to developers for production, improving potential engagement and bookings.</p>
+      <!-- PROJECT C -->
+      <article class="project-card warm-card">
+        <h2 class="warm-section-title">Project C — Restaurant Problem-Solving Case Study</h2>
+        <p class="warm-text"><strong>Role:</strong> Acting CTO & Lead Designer</p>
 
-        <h3>Design Concept & Why</h3>
-        <p>The page follows a simple, linear flow: situation → value proposition → booking form → contact & socials. This makes it easy for visitors to understand the business, take action, and verify contact info. Forms are lightweight and client-side validated to match the brief’s "no live database" requirement while still producing an actionable email for the restaurant.</p>
+        <p class="warm-text">
+          <strong>Challenge:</strong> A local restaurant lacked any structured online system for bookings, feedback,
+          or digital customer engagement.
+        </p>
+
+        <p class="warm-text">
+          <strong>My Approach:</strong> I built a lightweight prototype page including a booking/feedback form that generates
+          an email preview, social media integration, and clear business information.
+          The design stays simple, intuitive, and user-centred.
+        </p>
+
+        <p class="warm-text">
+          <strong>Outcome:</strong> The prototype provides a strong starting foundation the restaurant could hand off
+          to developers and begin improving customer engagement online.
+        </p>
+
+        <h3 class="warm-section-title">Design Concept & Reasoning</h3>
+        <p class="warm-text">
+          The layout follows a clear flow: problem → value → action. Forms are kept lightweight
+          (no live backend required for this coursework) but still practical with automatic email generation.
+          This reflects realistic business needs while fitting within the assessment brief.
+        </p>
       </article>
+
     </section>
+
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer warm-footer">
     <div class="container">
       <p>© 2025 Helen Onanusi</p>
     </div>
   </footer>
+
 </body>
 </html>
-
