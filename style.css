@@ -275,106 +275,112 @@ main h2{color:#2b2440; margin-top:1rem}
 }
 .reveal{opacity:0; animation:fadeUp .8s ease forwards; animation-delay:.2s}
 
-/* ----- CONTACT PAGE STYLE BOOST ----- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Helen Onanusi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
 
-/* ----- CONTACT PAGE STYLE BOOST ----- */
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Helen Onanusi</span>
+      </a>
 
-/* Page title */
-.page-title {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html">Showcase</a></li>
+          <li><a href="problem-solving.html">Problem-Solving</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
 
-/* Intro text */
-.intro-text {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
-  font-size: 1.1rem;
-  color: #444;
-}
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
 
-/* Soft box layouts */
-.pretty-box {
-  background: #fafafa;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
+  <main class="container contact-page">
+    
+    <h1 class="page-title">Restaurant Booking & Contact</h1>
+    <p class="intro-text">
+      This prototype demonstrates how customers can easily request a booking, send feedback, 
+      or contact Oak & Ember directly through a simple, accessible form.
+    </p>
 
-/* Section titles */
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
+    <!-- CONTACT INFO CARDS -->
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Location</h3>
+        <p>Manchester, United Kingdom</p>
+      </div>
 
-/* Info grid */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
+      <div class="contact-card">
+        <h3>📞 Contact</h3>
+        <p><strong>Email:</strong> manager@oakandember.example</p>
+        <p><strong>Phone:</strong> 0161 555 1234</p>
+      </div>
 
-.info-card {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
+      <div class="contact-card">
+        <h3>📱 Social Media</h3>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">X (Twitter)</a></p>
+      </div>
+    </section>
 
-.info-card h3 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
+    <!-- FORM CARD -->
+    <section class="form-card">
+      <h2>Send a Booking Request</h2>
+      <p class="form-note">Fill out this form and a booking request email will be generated for preview.</p>
 
-/* Form styling */
-.styled-form label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-}
+      <form id="contactForm">
 
-.styled-form input,
-.styled-form select,
-.styled-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
 
-.styled-form textarea {
-  resize: vertical;
-}
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
 
-/* Button style */
-.btn-primary {
-  margin-top: 1.5rem;
-  background: #222;
-  color: #fff;
-  padding: 0.9rem 1.4rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-}
+        <label for="requestType">Request Type</label>
+        <select id="requestType" name="requestType" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="booking">Table Booking</option>
+          <option value="feedback">Feedback</option>
+          <option value="general">General Enquiry</option>
+        </select>
 
-.btn-primary:hover {
-  background: #444;
-}
+        <label for="details">Booking / Feedback Details</label>
+        <textarea id="details" name="details" rows="4" placeholder="Include date, time, number of guests or message" required></textarea>
 
-/* Email preview box */
-.email-preview {
-  margin-top: 2rem;
-  background: #fff;
-  border: 1px solid #ddd;
-}
+        <div class="form-actions">
+          <button type="submit" class="btn">Generate Email Preview</button>
+        </div>
 
+      </form>
 
+      <section id="emailPreview" class="email-preview" hidden>
+        <h3>Email Preview</h3>
+        <pre id="emailContent"></pre>
+        <button id="copyEmail" class="btn ghost">Copy Email Text</button>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Prototype by Helen Onanusi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
