@@ -1,66 +1,104 @@
-<main class="container contact-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Helen Onanusi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
 
-  <h1 class="page-title">Restaurant Booking & Contact</h1>
-  <p class="intro-text">
-    Use this form to request a table booking, send feedback or make an enquiry.
-    A preview email will be generated for you before sending.
-  </p>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Helen Onanusi</span>
+      </a>
 
-  <!-- CONTACT INFO IN CARDS -->
-  <section class="contact-grid">
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html">Showcase</a></li>
+          <li><a href="problem-solving.html">Problem-Solving</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
 
-    <div class="contact-card">
-      <h3>📞 Contact Details</h3>
-      <p><strong>Email:</strong> manager@oakandember.example</p>
-      <p><strong>Phone:</strong> 0161 555 1234</p>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
     </div>
+  </header>
 
-    <div class="contact-card">
-      <h3>📱 Social Media</h3>
-      <ul class="social-list">
-        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com" target="_blank">X (Twitter)</a></li>
-      </ul>
-    </div>
+  <main class="container contact-page">
 
-  </section>
+    <h1 class="page-title">Restaurant Booking & Contact</h1>
+    <p class="intro-text">
+      Use this form to request a booking, send feedback or make a general enquiry.
+      A preview email will be generated before sending.
+    </p>
 
-  <!-- BOOKING FORM CARD -->
-  <section class="form-card">
-    <h2>Restaurant Booking / Feedback Form</h2>
-    <p class="form-note">Fill in all fields below and an email preview will be generated automatically.</p>
+    <!-- CONTACT INFO CARDS -->
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h3>📞 Contact Details</h3>
+        <p><strong>Email:</strong> manager@oakandember.example</p>
+        <p><strong>Phone:</strong> 0161 555 1234</p>
+      </div>
 
-    <form id="contactForm" class="styled-form">
-
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name">
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com">
-
-      <label for="requestType">Request Type</label>
-      <select id="requestType" name="requestType" required>
-        <option value="" disabled selected>Select an option...</option>
-        <option value="booking">Table Booking</option>
-        <option value="feedback">Feedback</option>
-        <option value="general">General Enquiry</option>
-      </select>
-
-      <label for="details">Details</label>
-      <textarea id="details" name="details" rows="4" required placeholder="Include booking date/time, guests, or message"></textarea>
-
-      <button type="submit" class="btn">Generate Email Preview</button>
-    </form>
-
-    <!-- EMAIL PREVIEW BOX -->
-    <section id="emailPreview" class="email-preview" hidden>
-      <h3>Email Preview</h3>
-      <pre id="emailContent"></pre>
-      <button id="copyEmail" class="btn ghost">Copy Email Text</button>
+      <div class="contact-card">
+        <h3>📱 Social Media</h3>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://twitter.com" target="_blank">X (Twitter)</a></li>
+        </ul>
+      </div>
     </section>
 
-  </section>
+    <!-- BOOKING FORM CARD -->
+    <section class="form-card">
+      <h2>Restaurant Booking / Feedback Form</h2>
+      <p class="form-note">Complete the sections below and a formatted email preview will appear.</p>
 
-</main>
+      <form id="contactForm" class="styled-form">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="requestType">Request Type</label>
+        <select id="requestType" name="requestType" required>
+          <option value="" disabled selected>Select an option...</option>
+          <option value="booking">Table Booking</option>
+          <option value="feedback">Feedback</option>
+          <option value="general">General Enquiry</option>
+        </select>
+
+        <label for="details">Details</label>
+        <textarea id="details" name="details" rows="4" required placeholder="Include booking date/time, guests, or message"></textarea>
+
+        <button type="submit" id="submitBtn" class="btn">Generate Email Preview</button>
+      </form>
+
+      <!-- EMAIL PREVIEW BOX -->
+      <section id="emailPreview" class="email-preview" style="display:none;">
+        <h3>Email Preview</h3>
+        <pre id="emailContent"></pre>
+        <button id="copyEmail" class="btn ghost">Copy Email Text</button>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Prototype by Helen Onanusi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
