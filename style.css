@@ -1,6 +1,4 @@
 /* style.css
-   Creative Elegant theme for Helen Onanusi
-   Responsive, semantic, with subtle animations
 */
 
 /* Basic reset + typography */
@@ -273,114 +271,9 @@ main h2{color:#2b2440; margin-top:1rem}
   from{opacity:0; transform:translateY(10px)}
   to{opacity:1; transform:translateY(0)}
 }
-.reveal{opacity:0; animation:fadeUp .8s ease forwards; animation-delay:.2s}
+.reveal{
+  opacity:0;
+  animation:fadeUp .8s ease forwards;
+  animation-delay:.2s
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Helen Onanusi</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">H</span>
-        <span class="logo-text">Helen Onanusi</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="showcase.html">Showcase</a></li>
-          <li><a href="problem-solving.html">Problem-Solving</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-    </div>
-  </header>
-
-  <main class="container contact-page">
-    
-    <h1 class="page-title">Restaurant Booking & Contact</h1>
-    <p class="intro-text">
-      This prototype demonstrates how customers can easily request a booking, send feedback, 
-      or contact Oak & Ember directly through a simple, accessible form.
-    </p>
-
-    <!-- CONTACT INFO CARDS -->
-    <section class="contact-grid">
-      <div class="contact-card">
-        <h3>📍 Location</h3>
-        <p>Manchester, United Kingdom</p>
-      </div>
-
-      <div class="contact-card">
-        <h3>📞 Contact</h3>
-        <p><strong>Email:</strong> manager@oakandember.example</p>
-        <p><strong>Phone:</strong> 0161 555 1234</p>
-      </div>
-
-      <div class="contact-card">
-        <h3>📱 Social Media</h3>
-        <p><a href="#">Instagram</a></p>
-        <p><a href="#">Facebook</a></p>
-        <p><a href="#">X (Twitter)</a></p>
-      </div>
-    </section>
-
-    <!-- FORM CARD -->
-    <section class="form-card">
-      <h2>Send a Booking Request</h2>
-      <p class="form-note">Fill out this form and a booking request email will be generated for preview.</p>
-
-      <form id="contactForm">
-
-        <label for="name">Full Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required>
-
-        <label for="email">Email Address</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required>
-
-        <label for="requestType">Request Type</label>
-        <select id="requestType" name="requestType" required>
-          <option value="" disabled selected>Select an option</option>
-          <option value="booking">Table Booking</option>
-          <option value="feedback">Feedback</option>
-          <option value="general">General Enquiry</option>
-        </select>
-
-        <label for="details">Booking / Feedback Details</label>
-        <textarea id="details" name="details" rows="4" placeholder="Include date, time, number of guests or message" required></textarea>
-
-        <div class="form-actions">
-          <button type="submit" class="btn">Generate Email Preview</button>
-        </div>
-
-      </form>
-
-      <section id="emailPreview" class="email-preview" hidden>
-        <h3>Email Preview</h3>
-        <pre id="emailContent"></pre>
-        <button id="copyEmail" class="btn ghost">Copy Email Text</button>
-      </section>
-
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 — Prototype by Helen Onanusi</p>
-    </div>
-  </footer>
-
-</body>
-</html>
