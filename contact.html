@@ -1,87 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Helen Onanusi</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-mark">H</span><span class="logo-text">Helen Onanusi</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="showcase.html">Showcase</a></li>
-          <li><a href="problem-solving.html">Problem-Solving</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
-    </div>
-  </header>
+<main class="container contact-page">
+  <h1>Restaurant Booking & Contact</h1>
+ 
 
-  <main class="container contact-page">
-    <h1>Get in Touch</h1>
-    <p>If you’d like to discuss a project, give feedback, or just connect, feel free to reach out via email or social media. I’d love to hear from you!</p>
+  <section class="contact-info">
+    <h2>Restaurant Contact Details</h2>
+    <p><strong>Email:</strong> <a href="mailto:manager@oakandbar.example">manager@oakandbar.example</a></p>
+    <p><strong>Phone:</strong> 0161 555 1234</p>
 
-    <section class="contact-info">
-      <h2>Email</h2>
-      <p><a href="mailto:helen.onanusi@.com">helen.onanusi@.com</a></p>
+    <h2>Social Media</h2>
+    <ul class="social-list">
+      <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://twitter.com" target="_blank">X (Twitter)</a></li>
+    </ul>
+  </section>
 
-      <h2>Social</h2>
-      <ul class="social-list">
-        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://twitter.com" target="_blank" rel="noopener">X (Twitter)</a></li>
-      </ul>
+  <section class="contact-form">
+    <h2>Restaurant Booking / Feedback Form</h2>
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-      <h2>Location</h2>
-      <p>Manchester, United Kingdom</p>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-      <h2>Availability</h2>
-      <p>Open to freelance and entry-level opportunities from June 2026 onward.</p>
+      <label for="requestType">Request Type</label>
+      <select id="requestType" name="requestType" required>
+        <option value="" disabled selected>Select an option...</option>
+        <option value="booking">Table Booking</option>
+        <option value="feedback">Feedback</option>
+        <option value="general">General Enquiry</option>
+      </select>
+
+      <label for="details">Booking / Feedback Details</label>
+      <textarea id="details" name="details" placeholder="Include date, time, number of guests, or your feedback" rows="4" required></textarea>
+
+      <button type="submit">Generate Restaurant Booking Email</button>
+    </form>
+
+    <section id="emailPreview" class="email-preview" aria-live="polite" hidden>
+      <h3>Email Preview</h3>
+      <pre id="emailContent"></pre>
+      <button id="copyEmail" class="btn">Copy preview text</button>
     </section>
-
-    <section class="contact-form">
-      <h2>Booking / Feedback Form</h2>
-      <form id="contactForm">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-
-        <label for="requestType">Request Type</label>
-        <select id="requestType" name="requestType" required>
-          <option value="" disabled selected>Choose...</option>
-          <option value="booking">Booking request</option>
-          <option value="feedback">Feedback</option>
-          <option value="general">General enquiry</option>
-        </select>
-
-        <label for="details">Details</label>
-        <textarea id="details" name="details" placeholder="Include date/time for bookings or feedback details" rows="4" required></textarea>
-
-        <button type="submit">Generate Email & Open Mail App</button>
-      </form>
-
-      <section id="emailPreview" class="email-preview" aria-live="polite" hidden>
-        <h3>Email Preview</h3>
-        <pre id="emailContent"></pre>
-        <button id="copyEmail" class="btn">Copy preview text</button>
-      </section>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Helen Onanusi</p>
-    </div>
-  </footer>
-</body>
-</html>
+  </section>
+</main>
