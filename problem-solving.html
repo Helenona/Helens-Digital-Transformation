@@ -1,82 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problem Solving</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Problem-Solving — Restaurant Digital Transformation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Digital Transformation Case Study</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="showcase.html">Showcase</a>
-            <a href="skills.html">Skills</a>
-            <a href="problem-solving.html" class="active">Problem Solving</a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="site-header warm-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark warm-logo">H</span>
+        <span class="logo-text">Helen Onanusi</span>
+      </a>
 
-    <main class="container">
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html">Showcase</a></li>
+          <li><a href="problem-solving.html" class="active">Problem-Solving</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <!-- BUSINESS CONTEXT -->
-        <section class="card">
-            <h2>Business Context</h2>
-            <p>
-                The purpose of this digital transformation case study is to explore how the restaurant industry 
-                can modernise its operations by improving customer engagement, streamlining booking processes, 
-                and strengthening communication through digital platforms. By integrating digital tools such 
-                as social media, automated forms, and user-friendly web interfaces, restaurants can enhance 
-                customer satisfaction and increase efficiency.
-            </p>
-        </section>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
 
-        <!-- SOCIAL MEDIA -->
-        <section class="card">
-            <h2>Connect With Us</h2>
-            <div class="social-links">
-                <a href="#" target="_blank">Facebook</a>
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Twitter/X</a>
-            </div>
-        </section>
+  <!-- MAIN CONTENT -->
+  <main class="container problem-page warm-intro">
 
-        <!-- CONTACT DETAILS -->
-        <section class="card">
-            <h2>Restaurant Contact Details</h2>
-            <p><strong>Phone:</strong> 0161 555 9823</p>
-            <p><strong>Email:</strong> example@restaurant.com</p>
-            <p><strong>Address:</strong> 24 Riverside Street, Manchester M1 4AB</p>
-        </section>
+    <h1 class="page-title warm-title">Restaurant Digital Transformation Case Study</h1>
+    <p class="intro-text">
+      Oak & Ember is a small independent restaurant exploring how simple digital tools can improve the way they connect with customers. This case study looks at how modernising communication channels and making information easier to access can make life smoother for both guests and staff.
+    </p>
 
-        <!-- INTERACTIVE FORM -->
-        <section class="card">
-            <h2>Booking & Feedback Form</h2>
-            <p>Fill out the form below and an automatic email will be generated with your message.</p>
+    <!-- BUSINESS CONTEXT -->
+    <section class="warm-card section-card">
+      <h2 class="warm-section-title">Business Context</h2>
+      <p class="warm-text">
+        The restaurant faced common challenges: customers struggled to get in touch during busy times, online information was scattered across social platforms, and bookings often came through inconsistent phone calls. My goal was to identify ways to simplify these processes and make the restaurant more approachable online.
+      </p>
+    </section>
 
-            <form action="mailto:example@restaurant.com" method="POST" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="Name" required>
+    <!-- DIGITAL SOLUTION -->
+    <section class="warm-card section-card">
+      <h2 class="warm-section-title">Digital Solution Approach</h2>
+      <p class="warm-text">
+        To make a real difference, I focused on clarity, accessibility, and ease of use. Key steps included:
+      </p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" required>
+      <ul class="warm-list">
+        <li>Designing a clean, responsive webpage that clearly explains services and offerings.</li>
+        <li>Making restaurant contact details easy to find and consistently presented.</li>
+        <li>Linking to all active social media platforms so customers could follow or reach out easily.</li>
+        <li>Designing a system (implemented on the Contact page) to automatically generate emails for bookings or feedback, without needing a database.</li>
+      </ul>
+    </section>
 
-                <label for="message">Booking Request / Feedback:</label>
-                <textarea id="message" name="Message" rows="5" required></textarea>
+    <!-- SOCIAL MEDIA LINKS -->
+    <section class="warm-card section-card">
+      <h2 class="warm-section-title">Social Media</h2>
+      <ul class="social-list">
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram: @oakandember</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook: Oak & Ember Restaurant</a></li>
+        <li><a href="https://twitter.com" target="_blank" rel="noopener">X (Twitter): @oakandemberUK</a></li>
+      </ul>
+    </section>
 
-                <button type="submit">Send Email</button>
-            </form>
-        </section>
+    <!-- CONTACT DETAILS -->
+    <section class="warm-card section-card">
+      <h2 class="warm-section-title">Contact Details</h2>
+      <p class="warm-text">
+        <strong>Oak & Ember Restaurant</strong><br>
+        123 Hawthorn Lane<br>
+        Manchester, UK<br>
+        Phone: 0161 555 2419<br>
+        Email: <a href="mailto:manager@oakandember.example">manager@oakandember.example</a>
+      </p>
+    </section>
 
-    </main>
+    <!-- REFLECTION -->
+    <section class="warm-card section-card">
+      <h2 class="warm-section-title">Outcome & Reflection</h2>
+      <p class="warm-text">
+        The digital updates create a much smoother experience for customers: finding information is straightforward, reaching the restaurant is simple, and sending structured enquiries takes just a few clicks. 
+      </p>
+      <p class="warm-text">
+        Even small digital improvements can have a big impact — reducing stress for staff, helping customers feel heard, and building trust in the restaurant’s brand.
+      </p>
+    </section>
 
-    <footer>
-        <p>© 2025 Digital Transformation Case Study</p>
-    </footer>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer warm-footer">
+    <div class="container">
+      <p>© 2025 — Prototype by Helen Onanusi</p>
+    </div>
+  </footer>
 
 </body>
 </html>
+
 
 
