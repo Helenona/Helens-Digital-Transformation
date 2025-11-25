@@ -1,240 +1,200 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helen Onanusi — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 
+  <!-- PRIVACY POPUP CSS -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 400px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background: #333;
-    }
-
-    .small-text {
-      font-size: 11px;
-      text-align: center;
-      margin-top: 10px;
-      color: #666;
-      cursor: pointer;
-    }
-
-    /* Popup Modal */
-    .modal {
+    .privacy-modal {
       display: none;
       position: fixed;
-      z-index: 9999;
-      padding-top: 120px;
+      z-index: 1000;
+      padding-top: 80px;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: auto;
-      background: rgba(0,0,0,0.6);
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    .modal-content {
+    .privacy-content {
       background: #fff;
       margin: auto;
-      padding: 20px;
+      padding: 20px 25px;
+      border-radius: 10px;
       width: 90%;
-      max-width: 500px;
-      border-radius: 8px;
-      line-height: 1.6;
-      font-size: 14px;
+      max-width: 600px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333;
     }
 
-    .close {
+    .close-btn {
       float: right;
-      font-size: 20px;
+      font-size: 22px;
       cursor: pointer;
-    }
-
-    /* Cookie popup */
-    #cookiePopup {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      background: #fff;
-      padding: 15px;
-      width: 260px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      z-index: 99999;
-      display: none;
-    }
-
-    #cookiePopup button {
-      margin-top: 10px;
-      padding: 8px;
-      width: 48%;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    #acceptCookies {
-      background: black;
-      color: white;
-    }
-
-    #rejectCookies {
-      background: #ddd;
     }
   </style>
+
 </head>
 
-
-
 <body>
+  <header class="site-header warm-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Helen Onanusi homepage">
+        <span class="logo-mark warm-logo">H</span>
+        <span class="logo-text">Helen Onanusi</span>
+      </a>
 
-  <!-- Main Content -->
-  <div class="container">
-    <h2>Create Account / Sign In</h2>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="showcase.html">Showcase</a></li>
+          <li><a href="problem-solving.html">Problem-Solving</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-    <form id="authForm">
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="password" id="password" placeholder="Password (min 6 chars)" required />
-      <button type="submit">Continue</button>
-    </form>
-
-    <div class="small-text" id="openPrivacy">
-      Privacy Policy
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">☰</button>
     </div>
-  </div>
+  </header>
 
+  <main>
 
+    <!-- HERO SECTION -->
+    <section class="hero warm-hero">
+      <div class="container hero-grid">
 
+        <div class="hero-text">
+          <h1 class="reveal warm-title">Hi — I’m Helen Onanusi.</h1>
 
+          <p class="lead warm-lead">
+            I’m a creative web developer and digital business enthusiast with a passion
+            for building meaningful, human-centred online experiences. I study Business with
+            Innovation and Technology at the University of Salford, focusing on how businesses
+            can use digital tools to improve customer experiences.
+          </p>
 
-  <!-- Privacy Policy Modal -->
-  <div id="privacyModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closePrivacy">&times;</span>
-      <h3>Privacy Policy</h3>
-      <p>
-        We value your privacy. Any information you provide, such as email or login details, 
-        is used solely for account access and improving your experience on this website.  
-        We do not sell or share your data with third parties.
+          <div class="hero-ctas">
+            <a class="btn warm-btn" href="showcase.html">View Projects</a>
+            <a class="btn ghost warm-ghost" href="problem-solving.html">Restaurant Case Study</a>
+          </div>
+        </div>
+
+        <div class="hero-card warm-card">
+          <img 
+            src="/IMG_2044.jpeg"
+            alt="Photo of me"
+            style="width: 100%; max-width: 400px; border-radius: 14px; border: 3px solid #b1866d;"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro container warm-intro">
+      <h2 class="warm-section-title">Professional Summary</h2>
+      <p class="warm-text">
+        I’m an aspiring web developer with a practical, problem-solving mindset. I focus on building
+        clean, accessible interfaces that help real businesses improve their digital presence. I enjoy
+        taking unclear requirements and turning them into intuitive user journeys and simple prototypes.
       </p>
 
-      <p>
-        You may request deletion of your data at any time.  
-        By continuing to use this site, you agree to our terms regarding data protection and cookies.
-      </p>
+      <h3 class="warm-subheading">Career Goals</h3>
+      <ol class="warm-list">
+        <li>Support local businesses through meaningful digital transformation.</li>
+        <li>Grow into data analytics and performance insights.</li>
+        <li>Build maintainable, user-first web applications.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- PRIVACY POLICY POPUP -->
+  <div id="privacyModal" class="privacy-modal">
+    <div class="privacy-content">
+      <span class="close-btn">&times;</span>
+
+      <h2>Privacy Policy</h2>
+      <p><strong>Last Updated: 2025</strong></p>
+
+      <p>This Privacy Policy explains how we collect, use, and protect your information when you use our website.</p>
+
+      <h3>1. Information We Collect</h3>
+      <p><strong>a. Information You Provide:</strong> We may collect your email, name, and encrypted password.</p>
+      <p><strong>b. Automatically Collected:</strong> IP address, browser type, device details, and pages visited.</p>
+
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>Account creation and login</li>
+        <li>Website improvement</li>
+        <li>Security and fraud prevention</li>
+        <li>Communication and support</li>
+      </ul>
+
+      <h3>3. Cookies</h3>
+      <p>We use cookies to remember preferences, maintain sessions, and improve user experience.</p>
+
+      <h3>4. Data Protection</h3>
+      <p>We encrypt passwords and use secure server connections.</p>
+
+      <h3>5. Third-Party Services</h3>
+      <p>We may use hosting, analytics, and security services.</p>
+
+      <h3>6. Your Rights</h3>
+      <p>You may request access, correction, or deletion of your data.</p>
+
+      <h3>7. Children's Privacy</h3>
+      <p>We do not knowingly collect information from children under 13.</p>
+
+      <h3>8. Changes to This Policy</h3>
+      <p>Updates will be posted on this page.</p>
+
+      <h3>9. Contact</h3>
+      <p>Contact us through our website for any questions.</p>
     </div>
   </div>
 
+  <!-- POPUP TRIGGER LINK -->
+  <p style="font-size: 13px; text-align:center; margin-top:20px;">
+    <a href="#" id="openPrivacy">Privacy Policy</a>
+  </p>
 
-
-
-
-  <!-- Cookie Consent -->
-  <div id="cookiePopup">
-    <p>We use cookies to improve your experience. Accept or reject?</p>
-    <div style="display: flex; justify-content: space-between;">
-      <button id="acceptCookies">Accept</button>
-      <button id="rejectCookies">Reject</button>
+  <footer class="site-footer warm-footer">
+    <div class="container">
+      <p>© 2025 Helen Onanusi • <a href="contact.html">Contact</a></p>
     </div>
-  </div>
+  </footer>
 
-
-
-
-
-  <!-- JavaScript -->
+  <!-- PRIVACY POPUP JAVASCRIPT -->
   <script>
-    // Form Validation
-    document.getElementById("authForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value.trim();
-
-      if (!email.includes("@") || !email.includes(".")) {
-        alert("Please enter a valid email.");
-        return;
-      }
-
-      if (password.length < 6) {
-        alert("Password must be at least 6 characters.");
-        return;
-      }
-
-      alert("Success! Your form is valid.");
-    });
-
-    // Privacy Modal
     const privacyModal = document.getElementById("privacyModal");
     const openPrivacy = document.getElementById("openPrivacy");
-    const closePrivacy = document.getElementById("closePrivacy");
+    const closeBtn = document.querySelector(".close-btn");
 
-    openPrivacy.onclick = () => privacyModal.style.display = "block";
-    closePrivacy.onclick = () => privacyModal.style.display = "none";
+    openPrivacy.addEventListener("click", (e) => {
+      e.preventDefault();
+      privacyModal.style.display = "block";
+    });
 
-    window.onclick = (e) => { if (e.target == privacyModal) privacyModal.style.display = "none"; }
+    closeBtn.addEventListener("click", () => {
+      privacyModal.style.display = "none";
+    });
 
-    // Cookie Consent
-    const cookiePopup = document.getElementById("cookiePopup");
-
-    if (!localStorage.getItem("cookieDecision")) {
-      cookiePopup.style.display = "block";
-    }
-
-    document.getElementById("acceptCookies").onclick = () => {
-      localStorage.setItem("cookieDecision", "accepted");
-      cookiePopup.style.display = "none";
-    };
-
-    document.getElementById("rejectCookies").onclick = () => {
-      localStorage.setItem("cookieDecision", "rejected");
-      cookiePopup.style.display = "none";
-    };
+    window.addEventListener("click", (e) => {
+      if (e.target === privacyModal) {
+        privacyModal.style.display = "none";
+      }
+    });
   </script>
 
 </body>
 </html>
+
