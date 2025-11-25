@@ -7,40 +7,40 @@
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 
-  <!-- COOKIE CONSENT STYLES -->
+  <!-- PRIVACY POPUP CSS -->
   <style>
-    :root{
-      --cc-bg:#ffffff;
-      --cc-ink:#111827;
-      --cc-accent:#2563eb;
-      --cc-radius:12px;
-      --cc-shadow: 0 6px 20px rgba(17,24,39,0.06);
-      --cc-z:99999;
-      --cc-transition:200ms ease;
+    .privacy-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 80px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.5);
     }
-    .cc-banner{
-      position:fixed;right:18px;bottom:18px;z-index:var(--cc-z);
-      max-width:420px;width:calc(100% - 36px);
-      background:var(--cc-bg);color:var(--cc-ink);
-      border-radius:var(--cc-radius);box-shadow:var(--cc-shadow);
-      padding:16px;display:flex;gap:12px;align-items:flex-start;transition:transform var(--cc-transition),opacity var(--cc-transition);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+
+    .privacy-content {
+      background: #fff;
+      margin: auto;
+      padding: 20px 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333;
     }
-    .cc-copy{flex:1;font-size:14px;line-height:1.3}
-    .cc-actions{display:flex;flex-direction:column;gap:8px}
-    .cc-row{display:flex;gap:8px}
-    .btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:#f3f4f6;cursor:pointer;font-weight:600}
-    .btn-primary{background:var(--cc-accent);color:white;border:none}
-    .cc-manage{background:transparent;border:none;color:var(--cc-accent);text-decoration:underline;cursor:pointer;padding:0}
-    .cc-footer-link{position:fixed;left:18px;bottom:18px;font-size:13px;z-index:var(--cc-z);}
-    .cc-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:999999;display:flex;align-items:center;justify-content:center;padding:20px}
-    .cc-modal{background:white;border-radius:12px;padding:18px;max-width:760px;width:100%;box-shadow:var(--cc-shadow);}
-    .cc-category{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid #f3f4f6}
-    .toggle{position:relative;width:44px;height:24px;background:#e5e7eb;border-radius:999px;cursor:pointer}
-    .toggle .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;background:white;border-radius:50%;transition:left 150ms}
-    .toggle.on{background:var(--cc-accent)}
-    .toggle.on .knob{left:22px}
+
+    .close-btn {
+      float: right;
+      font-size: 22px;
+      cursor: pointer;
+    }
   </style>
+
 </head>
 
 <body>
@@ -77,7 +77,8 @@
           <p class="lead warm-lead">
             I’m a creative web developer and digital business enthusiast with a passion
             for building meaningful, human-centred online experiences. I study Business with
-            Innovation and Technology at the University of Salford.
+            Innovation and Technology at the University of Salford, focusing on how businesses
+            can use digital tools to improve customer experiences.
           </p>
 
           <div class="hero-ctas">
@@ -86,7 +87,6 @@
           </div>
         </div>
 
-        <!-- IMAGE CARD -->
         <div class="hero-card warm-card">
           <img 
             src="/IMG_2044.jpeg"
@@ -102,8 +102,9 @@
     <section class="intro container warm-intro">
       <h2 class="warm-section-title">Professional Summary</h2>
       <p class="warm-text">
-        I’m an aspiring web developer with a practical, problem-solving mindset. I build
-        clean, accessible interfaces that help real businesses improve their digital presence.
+        I’m an aspiring web developer with a practical, problem-solving mindset. I focus on building
+        clean, accessible interfaces that help real businesses improve their digital presence. I enjoy
+        taking unclear requirements and turning them into intuitive user journeys and simple prototypes.
       </p>
 
       <h3 class="warm-subheading">Career Goals</h3>
@@ -116,49 +117,86 @@
 
   </main>
 
-  <footer class="site-footer warm-footer">
-    <div class="container">
-      <p>© 2025 Helen Onanusi • <a href="contact.html">Contact</a> • 
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
-    </div>
-  </footer>
+  <!-- PRIVACY POLICY POPUP -->
+  <div id="privacyModal" class="privacy-modal">
+    <div class="privacy-content">
+      <span class="close-btn">&times;</span>
 
-  <!-- COOKIE CONSENT HTML -->
-  <div id="cc-banner" class="cc-banner">
-    <div class="cc-copy">
-      <strong>We use cookies</strong>
-      <div>We use cookies to improve your experience and analyse site performance.</div>
-    </div>
-    <div class="cc-actions">
-      <div class="cc-row">
-        <button id="cc-accept" class="btn btn-primary">Accept</button>
-        <button id="cc-reject" class="btn">Reject</button>
-      </div>
+      <h2>Privacy Policy</h2>
+      <p><strong>Last Updated: 2025</strong></p>
+
+      <p>This Privacy Policy explains how we collect, use, and protect your information when you use our website.</p>
+
+      <h3>1. Information We Collect</h3>
+      <p><strong>a. Information You Provide:</strong> We may collect your email, name, and encrypted password.</p>
+      <p><strong>b. Automatically Collected:</strong> IP address, browser type, device details, and pages visited.</p>
+
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>Account creation and login</li>
+        <li>Website improvement</li>
+        <li>Security and fraud prevention</li>
+        <li>Communication and support</li>
+      </ul>
+
+      <h3>3. Cookies</h3>
+      <p>We use cookies to remember preferences, maintain sessions, and improve user experience.</p>
+
+      <h3>4. Data Protection</h3>
+      <p>We encrypt passwords and use secure server connections.</p>
+
+      <h3>5. Third-Party Services</h3>
+      <p>We may use hosting, analytics, and security services.</p>
+
+      <h3>6. Your Rights</h3>
+      <p>You may request access, correction, or deletion of your data.</p>
+
+      <h3>7. Children's Privacy</h3>
+      <p>We do not knowingly collect information from children under 13.</p>
+
+      <h3>8. Changes to This Policy</h3>
+      <p>Updates will be posted on this page.</p>
+
+      <h3>9. Contact</h3>
+      <p>Contact us through our website for any questions.</p>
     </div>
   </div>
 
-  <!-- COOKIE SCRIPT -->
+  <!-- POPUP TRIGGER LINK -->
+  <p style="font-size: 13px; text-align:center; margin-top:20px;">
+    <a href="#" id="openPrivacy">Privacy Policy</a>
+  </p>
+
+  <footer class="site-footer warm-footer">
+    <div class="container">
+      <p>© 2025 Helen Onanusi • <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <!-- PRIVACY POPUP JAVASCRIPT -->
   <script>
-    const banner = document.getElementById('cc-banner');
-    const accept = document.getElementById('cc-accept');
-    const reject = document.getElementById('cc-reject');
+    const privacyModal = document.getElementById("privacyModal");
+    const openPrivacy = document.getElementById("openPrivacy");
+    const closeBtn = document.querySelector(".close-btn");
 
-    if (!localStorage.getItem('cookieConsent')) {
-      banner.style.display = 'flex';
-    }
+    openPrivacy.addEventListener("click", (e) => {
+      e.preventDefault();
+      privacyModal.style.display = "block";
+    });
 
-    accept.onclick = () => {
-      localStorage.setItem('cookieConsent', 'accepted');
-      banner.style.display = 'none';
-    };
+    closeBtn.addEventListener("click", () => {
+      privacyModal.style.display = "none";
+    });
 
-    reject.onclick = () => {
-      localStorage.setItem('cookieConsent', 'rejected');
-      banner.style.display = 'none';
-    };
+    window.addEventListener("click", (e) => {
+      if (e.target === privacyModal) {
+        privacyModal.style.display = "none";
+      }
+    });
   </script>
 
 </body>
 </html>
+
 
 
